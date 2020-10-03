@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>
+		Betty's Art Store
+	</title>
+
+	<style>
+	* { font-family: verdana; font-size: 10pt; COLOR: gray; }
+	b { font-weight: bold; }
+	table { height: 50%; border: 1px solid gray;border: none;}
+	td { text-align: center; padding: 25;border: none;}
+  .option {height: 10%; width:50%; border: none;}
+  object {height:100%; width: 100%;}
+	</style>
+
+</head>
+<body onload="loadDisplayProduct()">
+<center>
+  <br>
+  Greeting.
+  <br>
+  <h1>Description</h1>
+  Description details
+  <br>
+  <br>
+  <table class="option">
+    <tr>
+      <td class="option"><div onclick="loadDisplayProduct()"><h1>View products</h1></div></td>
+      <td class="option"><div onclick="loadDisplayAppointment()"><h1>Make appointment</h1></div></td>
+    </tr>
+  </table>
+</center>
+<div id="display">
+  <table>
+    <tr><td>item 1<br><img src="item1.png"></td><td>item 2<br><img src="item2.png"></td></tr>
+    <tr><td>item 3<br><img src="item3.png"></td><td>item 4<br><img src="item4.png"></td></tr>
+  </table>
+</div>
+<br>
+<br>
+
+
+</body>
+<script type="text/javascript">
+  function loadDisplayProduct(){
+    document.getElementById("display").innerHTML='<object data="product.html" ></object>';
+  }
+  function loadDisplayAppointment(){
+    document.getElementById("display").innerHTML='<object data="appointment.html">';
+  }
+</script>
+</html>
